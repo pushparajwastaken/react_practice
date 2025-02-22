@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
   const [color, setColor] = useState("olive");
-
+  //onclick ko pura function chahiye hota hai na ki function ka reference ya phir function ki return value
   return (
     <div
       className="w-full h-screen duration-200"
@@ -14,7 +14,7 @@ function App() {
       <div className="fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2 rounded-5xl">
         <div className="flex flex-wrap justify-center gap-3 shadow-lg bg-white px-3 py-2 rounded-5xl">
           <button
-            onClick={() => setColor("red")}
+            onClick={() => setColor("oklch(0.444 0.177 26.899")}
             className="outline-none px-4 py-1 rounded-full text-white shadow-sm"
             style={{ backgroundColor: "red" }}
           >
