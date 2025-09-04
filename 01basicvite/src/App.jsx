@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Youtube from "./youtube.jsx";
 function App() {
-  const [count, setCount] = useState(0);
   const username = "Pushparaj";
   return (
     <>

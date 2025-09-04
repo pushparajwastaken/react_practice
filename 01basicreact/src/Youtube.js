@@ -1,4 +1,8 @@
-function Youtube() {
-  return <h1>This is a youtube App</h1>;
-}
+const Youtube = () => {
+  return (
+    <div>
+      <h1>Hello Lavanya</h1>
+    </div>
+  );
+};
 export default Youtube;
