@@ -16,7 +16,6 @@ function Card(props) {
       <div className="flex flex-col py-3 px-3 pb-7 -mt-4 bg-black rounded-b-xl ">
         <div className="flex justify-between">
           <h1 className="font-RubikBold ">Bored ape nft accidental</h1>
-          <h1 className="font-bold font-RubikBold">Price</h1>
         </div>
         <div className="flex  justify-between font-mono">
           <p>#345</p>

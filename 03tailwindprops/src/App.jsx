@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Card channel="chaiaurcode" someobj={myobject} />
-      //if we want ki har card ek alag value kare toh in this case we use
+
       <Card />
     </>
   );
