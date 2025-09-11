@@ -1,61 +1,51 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
   const [color, setColor] = useState("olive");
-  //onclick ko pura function chahiye hota hai na ki function ka reference ya phir function ki return value
+
   return (
     <div
-      className="w-full h-screen duration-200"
+      className="min-h-screen w-screen duration-200 flex items-center justify-center overflow-hidden "
       style={{ backgroundColor: color }}
     >
-      <div className="fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2 rounded-5xl">
-        <div className="flex flex-wrap justify-center gap-3 shadow-lg bg-white px-3 py-2 rounded-5xl">
-          <button
-            onClick={() => setColor("oklch(0.444 0.177 26.899")}
-            className="outline-none px-4 py-1 rounded-full text-white shadow-sm"
-            style={{ backgroundColor: "red" }}
-          >
-            Red
-          </button>
-          <button
-            onClick={() => setColor("white")}
-            className="outline-none px-4 py-1 rounded-full text-black shadow-sm"
-            style={{ backgroundColor: "white" }}
-          >
-            White
-          </button>
-          <button
-            onClick={() => setColor("black")}
-            className="outline-none px-4 py-1 rounded-full text-white shadow-sm"
-            style={{ backgroundColor: "black" }}
-          >
-            Black
-          </button>
-          <button
-            onClick={() => setColor("pink")}
-            className="outline-none px-4 py-1 rounded-full text-white shadow-sm"
-            style={{ backgroundColor: "pink" }}
-          >
-            Pink
-          </button>
-          <button
-            onClick={() => setColor("green")}
-            className="outline-none px-4 py-1 rounded-full text-white shadow-sm"
-            style={{ backgroundColor: "green" }}
-          >
-            Green
-          </button>
-          <button
-            onClick={() => setColor("blue")}
-            className="outline-none px-4 py-1 rounded-full text-white shadow-sm"
-            style={{ backgroundColor: "blue" }}
-          >
-            Blue
-          </button>
-        </div>
+      <div className="flex gap-4 bg-slate-200 p-4 rounded-lg shadow">
+        <button
+          className="px-4 py-2 rounded-lg text-white font-semibold bg-red-500 hover:bg-red-600"
+          onClick={() => setColor("red")}
+        >
+          Red
+        </button>
+        <button
+          className="px-4 py-2 rounded-lg text-white font-semibold bg-green-500 hover:bg-green-600"
+          onClick={() => setColor("green")}
+        >
+          Green
+        </button>
+        <button
+          className="px-4 py-2 rounded-lg text-white font-semibold bg-blue-500 hover:bg-blue-600"
+          onClick={() => setColor("blue")}
+        >
+          Blue
+        </button>
+        <button
+          className="px-4 py-2 rounded-lg text-white font-semibold bg-pink-500 hover:bg-pink-600"
+          onClick={() => setColor("pink")}
+        >
+          Pink
+        </button>
+        <button
+          className="px-4 py-2 rounded-lg text-white font-semibold bg-yellow-500 hover:bg-yellow-600"
+          onClick={() => setColor("yellow")}
+        >
+          Yellow
+        </button>
+        <button
+          className="px-4 py-2 rounded-lg text-white font-semibold bg-violet-500 hover:bg-violet-600"
+          onClick={() => setColor("violet")}
+        >
+          Violet
+        </button>
       </div>
     </div>
   );
