@@ -40,7 +40,7 @@ This will result in +3 as expected. ✅ */
   };
   return (
     <div>
-      <h1>Lavanyaa Love Youuuu</h1>
+      <h1>Lavanyaaa Love You</h1>
       <h2>Counter:{counter}</h2>
       <button onClick={addValue}>Add Value</button>
       <button onClick={RemoveValue}>Remove Value</button>
