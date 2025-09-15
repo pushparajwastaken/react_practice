@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from "react";
 const App = () => {
-  const [counter, setCounter] = useState(5);
+  const [counter, setCounter] = useState(3);
   const addValue = () => {
     if (counter < 20) {
       console.log("Button Clicked");
@@ -40,7 +40,6 @@ This will result in +3 as expected. ✅ */
   };
   return (
     <div>
-      <h1>Lavanyaaa Love You</h1>
       <h2>Counter:{counter}</h2>
       <button onClick={addValue}>Add Value</button>
       <button onClick={RemoveValue}>Remove Value</button>

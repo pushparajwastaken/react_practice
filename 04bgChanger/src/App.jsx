@@ -11,8 +11,8 @@ function App() {
     >
       <div className="flex gap-4 bg-white p-4 rounded-lg shadow">
         <button
-          className="px-4 py-2 rounded-lg text-white font-semibold bg-red-500 hover:bg-red-600"
-          onClick={() => setColor("red")}
+          className="px-4 py-2 rounded-lg text-white font-semibold bg-red-400 hover:bg-red-600"
+          onClick={() => setColor("blue")}
         >
           Red
         </button>
