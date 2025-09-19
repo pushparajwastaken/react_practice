@@ -8,7 +8,7 @@ import About from "./components/about/about.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 import Layout from "./Layout.jsx";
 import User from "./components/User/User.jsx";
-import GitHub, { githubinfoloader } from "./components/Github/Github.jsx";
+import GitHub, { githubinfoloader } from "./components/GitHub/GitHub.jsx";
 // To make a router, we have to import createBrowserRouter, which is a method and has an array inside it
 
 const router = createBrowserRouter([
