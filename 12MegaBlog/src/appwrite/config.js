@@ -57,7 +57,51 @@ export class Service {
       );
     } catch (error) {
       throw error;
+      return false;
     }
+  }
+  async getPost(slug) {
+    try {
+      return await this.databases.getDocument(
+        conf.appwriteDatabaseId,
+        conf.appwriteCollectionId,
+        slug
+      );
+    } catch (error) {
+      throw error;
+    }
+  }
+  async getPosts(queries = [Query.equal("status", "active")]) {
+    try {
+      return this.databases.listDocuments(
+        conf.appwriteDatabaseId,
+        conf.appwriteCollectionId,
+        queries
+      );
+    } catch (error) {
+      throw error;
+      return false;
+    }
+  }
+  async uploadFile(file) {
+    try {
+      return await this.bucket.createFile(conf.appbucketId, ID.unique(), file);
+    } catch (error) {
+      throw error;
+      return false;
+    }
+  }
+  async deletefile(fileId) {
+    try {
+      return await this.databases.deletefile(conf.appbucketId, fileId);
+      return true;
+    } catch (error) {
+      throw error;
+      return false;
+    }
+  }
+  getfilePreview(fileId) {
+    return this.databases.getfilePreview(conf.appbucketId, fileId);
   }
 }
 const service = new Service();
