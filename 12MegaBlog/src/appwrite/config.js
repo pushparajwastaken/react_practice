@@ -1,4 +1,4 @@
-import conf from "../config/config.js";
+import conf from "../conf/config.js";
 import { Client, Databases, Storage, Query, ID } from "appwrite";
 
 export class Service {
@@ -11,6 +11,7 @@ export class Service {
       .setEndpoint(conf.appwriteURL)
       .setProject(conf.appwriteProjectId);
     this.databases = new Databases(this.client);
+    this.bucket = new Storage(this.client);
   }
   async createPost({ title, slug, content, featuredImage, status, userId }) {
     try {
@@ -31,7 +32,7 @@ export class Service {
       throw error;
     }
   }
-  async updatePost(slug, { title, content, featuredImage, status, userId }) {
+  async updatePost(slug, { title, content, featuredImage, status }) {
     try {
       const updatedpost = await this.databases.updateDocument(
         conf.appwriteDatabaseId,

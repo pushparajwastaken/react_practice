@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import { useForm } from "react-hook-form";
 import { Button, Input, Select, RTE } from "../index.js";
-import service from "../../appwrite/config.js";
+import authService from "../../appwrite/config.js";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 function postForm({ post }) {
@@ -18,11 +18,11 @@ function postForm({ post }) {
   const userData = useSelector((state) => state.user.userData);
   const submit = async (data) => {
     if (post) {
-      data.image[0] ? service.uploadFile(data.image[0]) : null;
+      data.image[0] ? authService.uploadFile(data.image[0]) : null;
       if (file) {
-        service.deletefile(post.featuredImage);
+        authService.deletefile(post.featuredImage);
       }
-      const dbPost = await service.updatePost(post.$id, {
+      const dbPost = await authService.updatePost(post.$id, {
         ...data,
         featuredImage: file ? file.$id : undefined,
       });
@@ -30,11 +30,11 @@ function postForm({ post }) {
         navigate(`/post/${dbPost.$id}`);
       }
     } else {
-      const file = await service.uploadFile(data.image[0]);
+      const file = await authService.uploadFile(data.image[0]);
       if (file) {
         const fileid = file.$id;
         data.featuredImage = fileid;
-        const dbPost = await service.createPost({
+        const dbPost = await authService.createPost({
           ...data,
           userId: userData.$id,
         });

@@ -5,7 +5,7 @@ import Logo from "./Logo";
 import LogoutBtn from "./Header/LogoutBtn";
 import RTE from "./RTE";
 import SignUp from "./SignUp";
-import AuthLayout from "./AuthLayout";
+import Protected from "./AuthLayout";
 import Button from "./Button";
 import Input from "./Input";
 import Login from "./Login";
@@ -19,7 +19,7 @@ export {
   Login,
   Select,
   Button,
-  AuthLayout,
+  Protected,
   Header,
   Footer,
   Container,
